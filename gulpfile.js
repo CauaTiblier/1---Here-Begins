@@ -1,11 +1,11 @@
 const gulp = require('gulp');
-const cleancss = require('gulp-clean-css');
+const sass = require('gulp-sass')(require('sass'));
 const browserSync = require('browser-sync').create();
 
-gulp.task('css', css);
+gulp.task('sass', compilasass);
 gulp.task('watch', watch);
 gulp.task('browser', browser);
-gulp.task('default', gulp.parallel('watch', 'browser', 'css'));
+gulp.task('default', gulp.parallel('watch', 'browser', 'sass'));
 
 function browser(){
   browserSync.init({
@@ -15,10 +15,10 @@ function browser(){
   })
 }
 
-function css () {
-  return gulp.src('css/*.css')
-  .pipe(cleancss({compatibility: 'ie8'}))
-  .pipe(gulp.dest('css/compilad'))
+function compilasass () {
+  return gulp.src('css/scss/*.scss')
+  .pipe(sass({outputStyle: 'compressed'}))
+  .pipe(gulp.dest('css/compilad/'))
   .pipe(browserSync.stream());
 }
 
