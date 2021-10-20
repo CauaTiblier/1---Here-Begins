@@ -1,0 +1,129 @@
+.container{
+  width: 100vw;
+  height: 100vw;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  .card{
+
+    width: 88%;
+    margin-top: 7rem;
+    max-width: 450px;
+    background-color: white;
+    border-radius: 2rem;
+    @include box-shadow(0.1);
+
+    .hero{
+      width: 100%;
+      border-top-left-radius: 2rem;
+      border-top-right-radius: 2rem;
+    }
+
+    .card-wraper{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem;
+
+      .title{
+        color: $secondary-color3;
+        font-size: 2.2rem;
+        font-weight: 900;
+      }
+
+      .description{
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: $secondary-color2;
+        padding: 1.6rem 1rem;
+        line-height: 2.4rem;
+        text-align: center;
+      }
+
+      .plan-card{
+        background: $secondary-color;
+        width: 100%;
+        border-radius: 1.5rem;
+        margin: 0.8rem 0;
+        padding: 1.6rem 1.2rem;
+
+        .list{
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          gap: 2rem;
+        }
+
+        .payment{
+          color: $secondary-color3;
+          font-size: 1.4rem;
+          font-weight: 900;
+        }
+
+        .price{
+          color: $secondary-color2;
+          font-size: 1.4rem;
+          font-weight: 700;
+          opacity: 0.5;
+        }
+
+        a{
+          color: $primary-color2;
+          font-size: 1.3rem;
+          font-weight: 700;
+
+          &:hover{
+            text-decoration: none;
+            opacity: 0.75;
+          }
+        }
+      }
+
+      .btn{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      
+      .primary{
+        background: $primary-color2;
+        padding: 1.5rem;
+        margin: 1.5rem;
+        border-radius:1rem;
+        cursor: pointer;
+        @include box-shadow(0.15);
+        
+        a{
+          color: white;
+          text-decoration: none;
+          font-size: 1.5rem;
+          font-weight: 700;
+
+          &:hover{
+            opacity: 0.7;
+          }
+        }
+      }
+
+      .secundary{
+        padding: 0.8rem;
+
+        a{
+          text-decoration: none;
+          font-size: 1.5rem;
+          font-weight: 700;
+          color: $secondary-color2;
+
+          &:hover{
+            color: $secondary-color3;
+          }
+        }
+      }
+    }
+  }
+}

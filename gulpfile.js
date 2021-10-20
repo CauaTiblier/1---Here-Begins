@@ -23,6 +23,6 @@ function compilasass () {
 }
 
 function watch(){
-  gulp.watch('css/*.css', css);
+  gulp.watch('css/scss/*.scss', compilasass);
   gulp.watch('*html').on('change', browserSync.reload)
 }

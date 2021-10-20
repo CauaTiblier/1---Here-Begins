@@ -1,11 +1,14 @@
 /* Colors */
 
-:root{
-  --Pale-blue: hsl(225, 100%, 94%);
-  --Bright-blue: hsl(245, 75%, 52%);
-  --Very-pale-blue: hsl(225, 100%, 98%);
-  --Desaturated-blue: hsl(224, 23%, 55%);
-  --Dark-blue: hsl(223, 47%, 23%);
+$primary-color: hsl(225, 100%, 94%); //pale blue
+$primary-color2: hsl(245, 75%, 52%); //bright blue
+
+$secondary-color: hsl(225, 100%, 98%); //Very pale blue
+$secondary-color2: hsl(224, 23%, 55%);  //Desaturated blue
+$secondary-color3: hsl(223, 47%, 23%);  //Dark blue
+
+@mixin box-shadow($opacity){
+  box-shadow: 10px 10px 20px hsla(245, 75%, 52%, $opacity),  15px 15px 30px hsla(245, 75%, 52%, $opacity);
 }
 
 /* Resets */
@@ -14,3 +17,17 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  font-family: "Red hat Display", sans-serif;
+  background-image: url('../../img/pattern-background-mobile.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: $primary-color;
+  background-position: top;
+}
+
